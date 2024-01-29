@@ -46,7 +46,7 @@ const MyContainer = () => {
             rows={4}
             cols={40}
             />
-            <button onClick={handleClick}>Add new item to my nice list</button>   
+            <button onClick={() => handleClick()}>Add new item to my nice list</button>   
         </div> 
     )
 }
