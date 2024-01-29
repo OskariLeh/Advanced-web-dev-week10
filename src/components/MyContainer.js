@@ -19,14 +19,13 @@ const MyContainer = () => {
         setItems(newItems)
     }
 
-    const [textContent, setTextContent] = useState("Write new item for my list here!")
 
     const handleClick = () => {
         let id = items.length + 1
         let newItems = [...items]
         let newItem = {
             id: id.toString(),
-            text: textContent,
+            text: document.getElementById("text-content").value,
             clicked: false
         }
         newItems.push(newItem)
@@ -41,8 +40,8 @@ const MyContainer = () => {
             items={items}
             />
             <textarea 
-            value={textContent}
-            onChange={e => setTextContent(e.target.value)}
+            defaultValue="Write new item for my list here!"
+            id="text-content"
             name="newItem"
             rows={4}
             cols={40}
