@@ -22,14 +22,14 @@ const MyContainer = () => {
 
     const handleClick = () => {
         let id = items.length + 1
-        //let newItems = [...items]
+        let newItems = [...items]
         let newItem = {
             id: id.toString(),
             text: document.getElementById("text-content").value,
             clicked: false
         }
-        items.push(newItem)
-
+        newItems.push(newItem)
+        setItems(newItems)
     }
     
     return (
