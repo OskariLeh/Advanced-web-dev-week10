@@ -28,8 +28,8 @@ const MyContainer = () => {
             text: document.getElementById("text-content").value,
             clicked: false
         }
-        newItems.push(newItem)
-        setItems(newItems)
+        newItems.push(items)
+
     }
     
     return (
